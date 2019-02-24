@@ -40,10 +40,6 @@ const usersSchema = new Schema({
         required:[true,"College name is required"],
         minlength:[5,"College name must be at least 5 characters"]
     },
-    semester:{
-        type:String,
-        required:[true,"Semester name is required"]
-    },
     posts:[{
         type:Schema.Types.ObjectId,
         ref:'Posts'

@@ -8,7 +8,8 @@ const routes = require('./routes');
 const app = express();
 app.use(cors())
 const PORT = process.env.PORT || 4000;
-mongoose.connect('mongodb://localhost/kitabs');
+mongoose.connect('mongodb://localhost/kitabs', { useNewUrlParser: true });
+mongoose.set('useCreateIndex', true);
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended:true}));

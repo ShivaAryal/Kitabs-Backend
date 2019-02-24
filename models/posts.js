@@ -7,6 +7,10 @@ const postsSchema = new Schema({
         required : [true,"Book name is required"],
         min : [3,"Book name length must be at least 3 characters"]
     },
+    price:{
+        type: Number,
+        required: [true,"Book price is required"]
+    },
     description:{
         type : String
     },
